@@ -1,0 +1,65 @@
+.thumbnail {
+	margin: 25px 10px;
+	position: relative;
+
+	&.disabled {
+        order: 1;
+        
+        a { pointer-events: none; }
+
+		@media (max-width: 920px) {
+
+			&::after {
+				content: 'OFFLINE';
+				color: #f00;
+				top: 2px;
+				right: 5px;
+				position: absolute;
+				font-weight: 900;
+			}
+		}
+	}
+
+	img {
+		max-width: 300px;
+		cursor: pointer;
+
+		@media (min-width: 921px) and (max-width: 1400px) { max-width: 250px; }
+		
+	}
+
+	&.disabled {
+		
+		img {
+			cursor: initial;
+			filter: grayscale(0);
+			transition: filter .4s ease;
+			
+			&:hover {
+				filter: grayscale(1);
+			}
+		}
+
+		&:hover::after {
+			content: 'OFFLINE';
+			color: #f00;
+			top: 2px;
+			right: 5px;
+			position: absolute;
+			font-weight: 900;
+		}
+
+		@media (max-width: 920px) {
+			img { filter: grayscale(1); }
+	
+			&::after {
+				content: 'OFFLINE';
+				color: #f00;
+				top: 2px;
+				right: 5px;
+				position: absolute;
+				font-weight: 900;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.image-zoom {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 85%;
+	background-color: rgba(0, 0, 0, .8);
+
+	img {
+		width: 100%;
+		height: auto;
+		z-index: 3;
+	}
+
+	.close-image {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		z-index: 5;
+	}
+}

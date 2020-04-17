@@ -1,0 +1,41 @@
+section.page-content {
+	background-color: #eee;
+	box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.5);
+	min-height: 100vh;
+	left: 0;
+	padding-left: 15%;
+	position: absolute;
+	top: 0;
+	width: 85%;
+	z-index: 1;
+	transform: translateX(-105%);
+	transition: transform .8s ease;
+	
+	@media (max-width: 920px) {
+		padding-left: 0;
+		right: 0;
+		transform: translateX(0105%);
+		width: 100%;
+		z-index: 2;
+	}
+	
+	.close-button {
+		position: fixed;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		bottom: 50px;
+		left: 50px;
+		
+
+		@media (min-width: 920px) { display: none; }
+		@media (max-width: 920px) {
+			top: 20px;
+			left: 20px;
+			bottom: initial;
+		}
+	}
+	
+	&.active {
+		transform: translateX(0);
+	}
+}
